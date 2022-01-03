@@ -46,19 +46,9 @@ public class Main extends Application {
     public void start(Stage stage) {
 
         setup();
-
         stage.setScene(scene);
         stage.setFullScreen(true);
         stage.show();
-
-        scene.setOnKeyPressed(event -> {
-            switch (event.getCode()) {
-                case A:
-                    group.getChildren().remove(bricks.get(0).getBrick());
-                    bricks.remove(bricks.get(0));
-                    break;
-            }
-        });
     }
 
     public static void writeToDatabase() {
@@ -69,10 +59,6 @@ public class Main extends Application {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql", "root", password);
             Statement statement = connection.createStatement();
             statement.execute("insert into bricksTable(Score) Values (" + score + ")");
-
-            //while (resultSet.next()) {
-            //    System.out.println(resultSet.getString("Name"));
-            //}
 
         } catch (Exception e) {
             e.printStackTrace();

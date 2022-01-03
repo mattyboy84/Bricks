@@ -35,7 +35,6 @@ public class Ball {
             this.ball.relocate(position.x, position.y);
             //
 
-
             //
             if ((this.position.y + (2 * this.r)) > HEIGHT) {//bottom wall
                 position.set((((int) (WIDTH / 2 - (this.r / 2))) + 100), (int) (HEIGHT / 2 - (this.r / 2)));

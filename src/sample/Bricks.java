@@ -21,7 +21,6 @@ public class Bricks {
         this.brick = new Rectangle((int) (brickSpacing / 2) + (i * (brickWidth + brickSpacing)), 200 + (j * (brickHeight + brickSpacing)), brickWidth, brickHeight);
         this.brick.setFill(Color.rgb((int) (255 * rand.nextFloat()), (int) (255 * rand.nextFloat()), (int) (255 * rand.nextFloat())));
         group.getChildren().add(this.brick);
-
     }
 
     public Rectangle getBrick() {

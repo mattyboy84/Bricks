@@ -18,7 +18,6 @@ public class Paddle {
 
     public Paddle(int WIDTH, int HEIGHT, Group group) {
         this.position = new Vecc2f((int) ((WIDTH / 2) - (this.width / 2)), (int) (((HEIGHT / 2) - (this.height / 2)) + (HEIGHT * 0.4)));
-
         this.paddle = new Rectangle(this.position.x, this.position.y, this.width, this.height);
         this.paddle.setCache(true);
         //

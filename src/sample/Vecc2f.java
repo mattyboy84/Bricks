@@ -35,7 +35,6 @@ public class Vecc2f {
      * The x coordinate.
      */
     public float x;
-
     /**
      * The y coordinate.
      */
